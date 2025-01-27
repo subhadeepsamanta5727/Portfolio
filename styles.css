@@ -1,0 +1,196 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  color: white;
+}
+
+a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Home Section */
+#home h1 {
+  font-size: 2.5rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* About Section */
+#about .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#about .about-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid goldenrod;
+  margin-right: 20px;
+}
+
+#about p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+#skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#skills ul li {
+  font-size: 1.2rem;
+  background-color: goldenrod;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+  
+/* Project Cards Section */
+.project-cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card .view-btn {
+  background-color: goldenrod;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card .view-btn:hover {
+  background-color: #ffd700;
+}
+.experience-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; 
+}
+
+/* Form Styling */
+form {
+  background-color: #333;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #222;
+  border: 1px solid goldenrod;
+  color: white;
+}
+
+form button {
+  background-color: goldenrod;
+  color: black;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ffd700;
+}
+footer p{
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+
+  }
+
+  #about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .about-photo {
+    margin: 0 0 20px 0;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
