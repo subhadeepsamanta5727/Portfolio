@@ -1,24 +1,6 @@
-// Run everything after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scroll to sections
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-        });
-      }
-    });
-  });
+  emailjs.init("11F6jFT-AhQM1pWv1"); // Your actual EmailJS User ID
 
-  // Initialize EmailJS
-  (function () {
-    emailjs.init("11F6jFT-AhQM1pWv1"); // Replace with your actual EmailJS User ID
-  })();
-
-  // Form submission with EmailJS and validation
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -48,16 +30,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-// Redirect to GitHub
-function redirectToGitHub(url) {
-  window.open(url, '_blank');
-}
-
-// Redirect to WhatsApp
-function redirectToWhatsApp() {
-  const phoneNumber = "+91-7063670228";
-  const message = encodeURIComponent("Hello, I'd like to connect with you!");
-  const url = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.open(url, "_blank");
-}
